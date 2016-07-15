@@ -11,5 +11,7 @@ RUN apk --update add --virtual build-dependencies \
                                git \
                                && rm -rf /var/cache/apk/*
 
+RUN gem update bundler
+
 RUN mkdir /app
 WORKDIR /app
